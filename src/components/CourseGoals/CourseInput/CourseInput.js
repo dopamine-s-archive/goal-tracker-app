@@ -8,6 +8,7 @@ const FormControl = styled.div`
   margin: 0.5rem 0;
 
   & label {
+    color: ${props => (props.invalid ? '#f80b3b' : 'black')};
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
@@ -16,7 +17,8 @@ const FormControl = styled.div`
   & input {
     display: block;
     width: 100%;
-    border: 1px solid #ccc;
+    background: ${props => (props.invalid ? '#e5d6d4' : 'transparent')};
+    border: 1px solid ${props => (props.invalid ? '#f80b3b' : '#ccc')};
     font: inherit;
     line-height: 1.5rem;
     padding: 0 0.25rem;
@@ -26,15 +28,6 @@ const FormControl = styled.div`
     outline: none;
     background: #fad0ec;
     border-color: #8b005d;
-  }
-
-  &.invalid input {
-    background: #e5d6d4;
-    border-color: #f80b3b;
-  }
-
-  &.invalid label {
-    color: #f80b3b;
   }
 `;
 
@@ -60,7 +53,7 @@ const CourseInput = props => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <FormControl className={!isValid && 'invalid'}>
+      <FormControl invalid={!isValid}>
         <label>Course Goal</label>
         <input 
           type="text" 
