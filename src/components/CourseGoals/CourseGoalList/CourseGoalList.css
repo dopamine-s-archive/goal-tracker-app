@@ -3,3 +3,13 @@
   margin: 0;
   padding: 0;
 }
+
+.goal-list h2 {
+  text-align: center;
+  margin: 0.5rem 2rem 1rem;
+}
+
+.goal-list p {
+  text-align: center;
+  margin: 0;
+}

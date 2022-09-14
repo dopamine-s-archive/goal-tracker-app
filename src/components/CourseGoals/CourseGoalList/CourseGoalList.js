@@ -6,6 +6,8 @@ import './CourseGoalList.css';
 const CourseGoalList = props => {
   return (
     <ul className="goal-list">
+      <h2>Goals List</h2>
+      <p>click the goal to delete</p>
       {props.items.map(goal => (
         <CourseGoalItem
           key={goal.id}
