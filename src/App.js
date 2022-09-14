@@ -6,8 +6,8 @@ import './App.css';
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([
-    { text: 'Do all exercises!', id: 'g1' },
-    { text: 'Finish the course!', id: 'g2' }
+    { text: `Don't forget to buy a new car!`, id: 'g1' },
+    { text: 'Finish the React course!', id: 'g2' },
   ]);
 
   const addGoalHandler = enteredText => {
@@ -37,6 +37,7 @@ const App = () => {
 
   return (
     <div>
+      <h1>Personal Goals</h1>
       <section id="goal-form">
         <CourseInput onAddGoal={addGoalHandler} />
       </section>

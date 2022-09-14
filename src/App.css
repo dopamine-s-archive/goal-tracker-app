@@ -4,6 +4,12 @@
   margin: 3rem auto;
 }
 
+@media (min-width: 768px) {
+  #goals {
+    padding: 0 2rem;
+  }
+}  
+
 #goal-form {
   width: 30rem;
   max-width: 90%;
