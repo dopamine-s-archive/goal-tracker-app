@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import { getFromStorage, setToStorage } from './localStorage';
 import CourseGoalList from './components/CourseGoals/CourseGoalList/CourseGoalList';
 import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 import './App.css';
 
 const App = () => {
-  const [courseGoals, setCourseGoals] = useState([
+  const [courseGoals, setCourseGoals] = useState(getFromStorage("tasks") ||
+  [
     { text: `Don't forget to buy a new car!`, id: 'g1' },
     { text: 'Finish the React course!', id: 'g2' },
   ]);
+
+  useEffect(() => {
+    setToStorage("tasks", courseGoals);
+  }, [courseGoals]);
 
   const addGoalHandler = enteredText => {
     setCourseGoals(prevGoals => {
