@@ -5,12 +5,12 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^12.5.0",
+    "@testing-library/user-event": "^14.4.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.3.9",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
